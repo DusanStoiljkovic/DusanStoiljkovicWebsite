@@ -1,0 +1,584 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Dušan Stoiljković — Junior Software Developer</title>
+<meta name="description" content="Junior Software Developer with professional Android/Kotlin experience and a strong focus on backend development in TypeScript & Node.js. Open to relocation to Austria.">
+<meta property="og:title" content="Dušan Stoiljković — Junior Software Developer">
+<meta property="og:description" content="Android/Kotlin professional experience, backend TypeScript/Node.js focus. Open to roles in Austria.">
+<meta property="og:type" content="website">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  * { box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+  body { margin: 0; }
+  section { scroll-margin-top: 84px; }
+  ::selection { background: oklch(0.55 0.15 256 / 0.22); }
+  @keyframes heroIn { from { opacity: 0; transform: translateY(20px); } to { opacity: 1; transform: none; } }
+
+  /* hover states (ported from the prototype's style-hover attributes) */
+  .nav-link { transition: color .2s ease; }
+  .nav-link:hover { color: #fff !important; }
+  .nav-pill { transition: background .2s ease; }
+  .nav-pill:hover { background: rgba(255,255,255,0.08); }
+  .cta-primary { transition: background .2s ease; }
+  .cta-primary:hover { background: oklch(0.5 0.15 256) !important; }
+  .cta-ghost { transition: background .2s ease, border-color .2s ease, color .2s ease; }
+  .cta-ghost:hover { background: rgba(255,255,255,0.07); }
+  .cta-social { transition: color .2s ease, border-color .2s ease; }
+  .cta-social:hover { color: #fff !important; border-color: rgba(255,255,255,0.4) !important; }
+  .btn-dark { transition: background .2s ease; }
+  .btn-dark:hover { background: #000 !important; }
+  .repo-link { transition: text-decoration-color .2s ease; }
+  .repo-link:hover { text-decoration: underline; }
+  .all-repos { transition: border-color .2s ease; }
+  .all-repos:hover { border-color: #1A1C20 !important; }
+  .cv-primary { transition: background .2s ease; }
+  .cv-primary:hover { background: oklch(0.5 0.15 256) !important; }
+  .cv-secondary { transition: background .2s ease; }
+  .cv-secondary:hover { background: #F0EFEA; }
+  .contact-card { transition: background .2s ease; }
+  .contact-card:hover { background: rgba(255,255,255,0.09) !important; }
+  .lang-btn { padding:6px 12px; border-radius:999px; border:none; cursor:pointer; font-family:'IBM Plex Mono',monospace; font-size:12px; font-weight:500; letter-spacing:0.04em; background:transparent; color:rgba(255,255,255,0.5); transition: background .2s ease, color .2s ease; }
+  .lang-btn.active { background:rgba(255,255,255,0.16); color:#fff; }
+
+  /* responsive */
+  @media (max-width: 860px) {
+    .grid-about { grid-template-columns: 1fr !important; gap: 36px !important; }
+    .grid-skills { grid-template-columns: 1fr !important; }
+    .grid-exp { grid-template-columns: 1fr !important; gap: 28px !important; }
+    .grid-career { grid-template-columns: 1fr !important; gap: 36px !important; }
+    .grid-projects-3 { grid-template-columns: 1fr !important; }
+    .grid-featured { grid-template-columns: 1fr !important; }
+    .grid-contact { grid-template-columns: 1fr !important; gap: 32px !important; }
+    .nav-links-wrap { gap: 14px !important; }
+  }
+  @media (max-width: 620px) {
+    .nav-desktop-link { display: none !important; }
+  }
+</style>
+</head>
+<body style="font-family:'IBM Plex Sans',system-ui,sans-serif; background:#F6F5F2; color:#1A1C20; -webkit-font-smoothing:antialiased; overflow-x:hidden;">
+
+  <!-- NAV -->
+  <nav data-nav style="position:fixed; top:0; left:0; right:0; z-index:50; display:flex; align-items:center; justify-content:space-between; gap:16px; padding:14px 28px; border-bottom:1px solid transparent; transition:background .3s ease, border-color .3s ease;">
+    <a href="#top" style="font-family:'IBM Plex Mono',monospace; font-size:14px; font-weight:500; letter-spacing:0.02em; color:#fff; text-decoration:none; flex-shrink:0;">DS<span style="color:oklch(0.7 0.15 256);">.</span></a>
+    <div class="nav-links-wrap" style="display:flex; align-items:center; gap:22px; flex-wrap:wrap; justify-content:flex-end;">
+      <a href="#about" class="nav-link nav-desktop-link" data-i18n="navAbout" style="font-size:14px; color:rgba(255,255,255,0.72); text-decoration:none;"></a>
+      <a href="#skills" class="nav-link nav-desktop-link" data-i18n="navSkills" style="font-size:14px; color:rgba(255,255,255,0.72); text-decoration:none;"></a>
+      <a href="#experience" class="nav-link nav-desktop-link" data-i18n="navExperience" style="font-size:14px; color:rgba(255,255,255,0.72); text-decoration:none;"></a>
+      <a href="#projects" class="nav-link nav-desktop-link" data-i18n="navProjects" style="font-size:14px; color:rgba(255,255,255,0.72); text-decoration:none;"></a>
+      <div style="display:flex; gap:2px; padding:3px; background:rgba(255,255,255,0.06); border:1px solid rgba(255,255,255,0.12); border-radius:999px;">
+        <button type="button" class="lang-btn" data-lang="en">EN</button>
+        <button type="button" class="lang-btn" data-lang="sr">SR</button>
+        <button type="button" class="lang-btn" data-lang="de">DE</button>
+      </div>
+      <a href="#contact" class="nav-pill" data-i18n="navContact" style="display:inline-flex; align-items:center; padding:8px 16px; border-radius:999px; border:1px solid rgba(255,255,255,0.22); font-size:14px; color:#fff; text-decoration:none;"></a>
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <header id="top" style="position:relative; background:#14161A; color:#fff; padding:150px 28px 96px;">
+    <div style="max-width:1080px; margin:0 auto;">
+      <div style="animation:heroIn .8s cubic-bezier(.22,1,.36,1) both;">
+        <div data-i18n="heroEyebrow" style="font-family:'IBM Plex Mono',monospace; font-size:13px; letter-spacing:0.16em; color:oklch(0.74 0.13 256); text-transform:uppercase;"></div>
+      </div>
+      <h1 data-i18n="heroTitle" style="animation:heroIn .8s cubic-bezier(.22,1,.36,1) .06s both; font-family:'Space Grotesk',sans-serif; font-weight:600; font-size:clamp(36px,5.6vw,72px); line-height:1.05; letter-spacing:-0.02em; margin:22px 0 0; max-width:17ch;"></h1>
+      <p data-i18n="heroSubtitle" style="animation:heroIn .8s cubic-bezier(.22,1,.36,1) .12s both; font-size:clamp(17px,2vw,20px); line-height:1.6; color:rgba(255,255,255,0.72); margin:28px 0 0; max-width:62ch;"></p>
+
+      <div style="animation:heroIn .8s cubic-bezier(.22,1,.36,1) .16s both; display:inline-flex; align-items:center; gap:9px; margin-top:26px; padding:8px 15px; border-radius:999px; background:oklch(0.55 0.15 256 / 0.16); border:1px solid oklch(0.6 0.15 256 / 0.35);">
+        <span style="width:8px; height:8px; border-radius:50%; background:oklch(0.74 0.16 150); box-shadow:0 0 0 3px oklch(0.74 0.16 150 / 0.2);"></span>
+        <span data-i18n="heroAvailableText" style="font-size:14px; color:rgba(255,255,255,0.9);"></span>
+      </div>
+
+      <div style="animation:heroIn .8s cubic-bezier(.22,1,.36,1) .2s both; display:flex; flex-wrap:wrap; gap:12px; margin-top:38px;">
+        <a href="#projects" class="cta-primary" data-i18n="heroCtaProjects" style="display:inline-flex; align-items:center; gap:9px; padding:14px 24px; border-radius:999px; background:oklch(0.55 0.15 256); color:#fff; font-weight:500; font-size:15px; text-decoration:none;"></a>
+        <a href="#cv" class="cta-ghost" data-i18n="heroCtaCv" style="display:inline-flex; align-items:center; gap:9px; padding:14px 24px; border-radius:999px; background:transparent; border:1px solid rgba(255,255,255,0.2); color:#fff; font-weight:500; font-size:15px; text-decoration:none;"></a>
+        <a href="https://github.com/DusanStoiljkovic" target="_blank" rel="noopener" class="cta-social" style="display:inline-flex; align-items:center; gap:9px; padding:14px 20px; border-radius:999px; background:transparent; border:1px solid rgba(255,255,255,0.2); color:rgba(255,255,255,0.85); font-weight:500; font-size:15px; text-decoration:none;">GitHub</a>
+        <a href="https://www.linkedin.com/in/dusan-stoiljkovic-508a51235/" target="_blank" rel="noopener" class="cta-social" style="display:inline-flex; align-items:center; gap:9px; padding:14px 20px; border-radius:999px; background:transparent; border:1px solid rgba(255,255,255,0.2); color:rgba(255,255,255,0.85); font-weight:500; font-size:15px; text-decoration:none;">LinkedIn</a>
+      </div>
+
+      <div style="animation:heroIn .8s cubic-bezier(.22,1,.36,1) .26s both; display:flex; flex-wrap:wrap; gap:8px 22px; margin-top:54px; padding-top:30px; border-top:1px solid rgba(255,255,255,0.1); font-family:'IBM Plex Mono',monospace; font-size:13px; color:rgba(255,255,255,0.55);">
+        <span>Kotlin</span><span style="color:rgba(255,255,255,0.25);">/</span>
+        <span>KMP</span><span style="color:rgba(255,255,255,0.25);">/</span>
+        <span>Jetpack Compose</span><span style="color:rgba(255,255,255,0.25);">/</span>
+        <span>TypeScript</span><span style="color:rgba(255,255,255,0.25);">/</span>
+        <span>Node.js</span><span style="color:rgba(255,255,255,0.25);">/</span>
+        <span>Express.js</span><span style="color:rgba(255,255,255,0.25);">/</span>
+        <span>REST APIs</span><span style="color:rgba(255,255,255,0.25);">/</span>
+        <span>Git</span>
+      </div>
+    </div>
+  </header>
+
+  <!-- ABOUT -->
+  <section id="about" style="padding:104px 28px;">
+    <div style="max-width:1080px; margin:0 auto;">
+      <div data-reveal class="grid-about" style="display:grid; grid-template-columns:0.7fr 1.3fr; gap:48px; align-items:start;">
+        <div>
+          <div style="position:relative; border-radius:16px; overflow:hidden; aspect-ratio:4/5; border:1px solid #E4E2DC; box-shadow:0 1px 3px rgba(0,0,0,0.04);">
+            <img src="uploads/profilna.jpeg" alt="Dušan Stoiljković" style="width:100%; height:100%; object-fit:cover; object-position:center 18%; display:block;">
+          </div>
+          <div data-i18n="aboutLabel" style="font-family:'IBM Plex Mono',monospace; font-size:13px; letter-spacing:0.12em; color:oklch(0.55 0.15 256); text-transform:uppercase; margin-top:26px;"></div>
+          <h2 data-i18n="aboutHeading" style="font-family:'Space Grotesk',sans-serif; font-weight:600; font-size:clamp(28px,3.4vw,40px); line-height:1.1; letter-spacing:-0.01em; margin:18px 0 0;"></h2>
+        </div>
+        <div style="display:flex; flex-direction:column; gap:20px; font-size:17px; line-height:1.7; color:#3A3D44;">
+          <p data-i18n="aboutP1" style="margin:0;"></p>
+          <p data-i18n="aboutP2" style="margin:0;"></p>
+          <p data-i18n="aboutP3" style="margin:0;"></p>
+          <div style="display:flex; flex-wrap:wrap; gap:22px; margin-top:8px; padding-top:22px; border-top:1px solid #E4E2DC;">
+            <div><div data-i18n="aboutStat1T" style="font-family:'Space Grotesk',sans-serif; font-size:24px; font-weight:600;"></div><div data-i18n="aboutStat1S" style="font-size:13px; color:#6B6F77; margin-top:2px;"></div></div>
+            <div style="width:1px; background:#E4E2DC;"></div>
+            <div><div data-i18n="aboutStat2T" style="font-family:'Space Grotesk',sans-serif; font-size:24px; font-weight:600;"></div><div data-i18n="aboutStat2S" style="font-size:13px; color:#6B6F77; margin-top:2px;"></div></div>
+            <div style="width:1px; background:#E4E2DC;"></div>
+            <div><div data-i18n="aboutStat3T" style="font-family:'Space Grotesk',sans-serif; font-size:24px; font-weight:600;"></div><div data-i18n="aboutStat3S" style="font-size:13px; color:#6B6F77; margin-top:2px;"></div></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SKILLS -->
+  <section id="skills" style="padding:88px 28px; background:#FFFFFF; border-top:1px solid #E9E7E1; border-bottom:1px solid #E9E7E1;">
+    <div style="max-width:1080px; margin:0 auto;">
+      <div data-reveal style="max-width:640px;">
+        <div data-i18n="skillsLabel" style="font-family:'IBM Plex Mono',monospace; font-size:13px; letter-spacing:0.12em; color:oklch(0.55 0.15 256); text-transform:uppercase;"></div>
+        <h2 data-i18n="skillsHeading" style="font-family:'Space Grotesk',sans-serif; font-weight:600; font-size:clamp(28px,3.4vw,40px); line-height:1.1; letter-spacing:-0.01em; margin:18px 0 0;"></h2>
+      </div>
+
+      <div class="grid-skills" style="display:grid; grid-template-columns:repeat(3,1fr); gap:18px; margin-top:44px;">
+        <div data-reveal style="background:#14161A; color:#fff; border-radius:14px; padding:26px;">
+          <span data-i18n="skProfKicker" style="font-family:'IBM Plex Mono',monospace; font-size:12px; color:oklch(0.74 0.13 256);"></span>
+          <h3 style="font-family:'Space Grotesk',sans-serif; font-size:20px; font-weight:600; margin:12px 0 6px;">Android / Kotlin</h3>
+          <p data-i18n="skProfDesc" style="font-size:14px; line-height:1.55; color:rgba(255,255,255,0.6); margin:0 0 18px;"></p>
+          <div style="display:flex; flex-wrap:wrap; gap:8px;">
+            <span style="padding:7px 13px; border-radius:8px; background:rgba(255,255,255,0.08); font-size:13px;">Kotlin</span>
+            <span style="padding:7px 13px; border-radius:8px; background:rgba(255,255,255,0.08); font-size:13px;">Kotlin Multiplatform</span>
+            <span style="padding:7px 13px; border-radius:8px; background:rgba(255,255,255,0.08); font-size:13px;">Jetpack Compose</span>
+            <span style="padding:7px 13px; border-radius:8px; background:rgba(255,255,255,0.08); font-size:13px;">REST API</span>
+            <span style="padding:7px 13px; border-radius:8px; background:rgba(255,255,255,0.08); font-size:13px;">Git</span>
+          </div>
+        </div>
+
+        <div data-reveal data-reveal-delay="80" style="background:#FBFAF7; border:1px solid #E4E2DC; border-radius:14px; padding:26px; position:relative;">
+          <div data-i18n="skFocusBadge" style="position:absolute; top:18px; right:18px; font-size:11px; font-family:'IBM Plex Mono',monospace; color:oklch(0.5 0.15 256); background:oklch(0.55 0.15 256 / 0.1); padding:4px 9px; border-radius:999px;"></div>
+          <div data-i18n="skFocusKicker" style="font-family:'IBM Plex Mono',monospace; font-size:12px; color:oklch(0.55 0.15 256);"></div>
+          <h3 style="font-family:'Space Grotesk',sans-serif; font-size:20px; font-weight:600; margin:12px 0 6px;">Backend TypeScript</h3>
+          <p data-i18n="skFocusDesc" style="font-size:14px; line-height:1.55; color:#6B6F77; margin:0 0 18px;"></p>
+          <div style="display:flex; flex-wrap:wrap; gap:8px;">
+            <span style="padding:7px 13px; border-radius:8px; background:#fff; border:1px solid #E4E2DC; font-size:13px;">TypeScript</span>
+            <span style="padding:7px 13px; border-radius:8px; background:#fff; border:1px solid #E4E2DC; font-size:13px;">Node.js</span>
+            <span style="padding:7px 13px; border-radius:8px; background:#fff; border:1px solid #E4E2DC; font-size:13px;">Express.js</span>
+            <span style="padding:7px 13px; border-radius:8px; background:#fff; border:1px solid #E4E2DC; font-size:13px;">REST APIs</span>
+            <span style="padding:7px 13px; border-radius:8px; background:#fff; border:1px solid #E4E2DC; font-size:13px;">Clean Architecture</span>
+            <span style="padding:7px 13px; border-radius:8px; background:#fff; border:1px solid #E4E2DC; font-size:13px;">Unit Tests</span>
+            <span style="padding:7px 13px; border-radius:8px; background:#fff; border:1px solid #E4E2DC; font-size:13px;">Docker</span>
+            <span style="padding:7px 13px; border-radius:8px; background:#fff; border:1px solid #E4E2DC; font-size:13px;">Databases</span>
+          </div>
+        </div>
+
+        <div data-reveal data-reveal-delay="160" style="background:#FBFAF7; border:1px solid #E4E2DC; border-radius:14px; padding:26px;">
+          <div data-i18n="skSupKicker" style="font-family:'IBM Plex Mono',monospace; font-size:12px; color:#9A958B;"></div>
+          <h3 data-i18n="skSupTitle" style="font-family:'Space Grotesk',sans-serif; font-size:20px; font-weight:600; margin:12px 0 6px;"></h3>
+          <p data-i18n="skSupDesc" style="font-size:14px; line-height:1.55; color:#6B6F77; margin:0 0 18px;"></p>
+          <div style="display:flex; flex-wrap:wrap; gap:8px;">
+            <span style="padding:7px 13px; border-radius:8px; background:#fff; border:1px solid #E4E2DC; font-size:13px;">JavaScript</span>
+            <span style="padding:7px 13px; border-radius:8px; background:#fff; border:1px solid #E4E2DC; font-size:13px;">React</span>
+            <span style="padding:7px 13px; border-radius:8px; background:#fff; border:1px solid #E4E2DC; font-size:13px;">Vue.js</span>
+            <span style="padding:7px 13px; border-radius:8px; background:#fff; border:1px solid #E4E2DC; font-size:13px;">MongoDB</span>
+            <span style="padding:7px 13px; border-radius:8px; background:#fff; border:1px solid #E4E2DC; font-size:13px;">Go</span>
+            <span style="padding:7px 13px; border-radius:8px; background:#fff; border:1px solid #E4E2DC; font-size:13px;">HTML &amp; CSS</span>
+          </div>
+        </div>
+      </div>
+      <p data-i18n="skillsNote" style="font-size:13px; color:#9A958B; margin:20px 0 0; font-family:'IBM Plex Mono',monospace;"></p>
+    </div>
+  </section>
+
+  <!-- EXPERIENCE -->
+  <section id="experience" style="padding:104px 28px;">
+    <div style="max-width:1080px; margin:0 auto;">
+      <div data-reveal style="max-width:640px;">
+        <div data-i18n="expLabel" style="font-family:'IBM Plex Mono',monospace; font-size:13px; letter-spacing:0.12em; color:oklch(0.55 0.15 256); text-transform:uppercase;"></div>
+        <h2 data-i18n="expHeading" style="font-family:'Space Grotesk',sans-serif; font-weight:600; font-size:clamp(28px,3.4vw,40px); line-height:1.1; letter-spacing:-0.01em; margin:18px 0 0;"></h2>
+      </div>
+
+      <div data-reveal class="grid-exp" style="margin-top:40px; background:#fff; border:1px solid #E4E2DC; border-radius:16px; padding:34px; display:grid; grid-template-columns:0.85fr 1.15fr; gap:40px;">
+        <div>
+          <div data-i18n="expPeriod" style="font-family:'IBM Plex Mono',monospace; font-size:13px; color:oklch(0.55 0.15 256);"></div>
+          <h3 style="font-family:'Space Grotesk',sans-serif; font-size:24px; font-weight:600; margin:12px 0 4px;">Android Developer</h3>
+          <div style="font-size:16px; color:#3A3D44;">Nissatech Innovation Centre</div>
+          <div style="font-size:14px; color:#6B6F77; margin-top:2px;">Niš, Serbia</div>
+          <div style="display:flex; flex-wrap:wrap; gap:7px; margin-top:20px;">
+            <span style="padding:6px 11px; border-radius:7px; background:#F0EFEA; font-size:12px; font-family:'IBM Plex Mono',monospace; color:#3A3D44;">Kotlin</span>
+            <span style="padding:6px 11px; border-radius:7px; background:#F0EFEA; font-size:12px; font-family:'IBM Plex Mono',monospace; color:#3A3D44;">KMP</span>
+            <span style="padding:6px 11px; border-radius:7px; background:#F0EFEA; font-size:12px; font-family:'IBM Plex Mono',monospace; color:#3A3D44;">Compose</span>
+            <span style="padding:6px 11px; border-radius:7px; background:#F0EFEA; font-size:12px; font-family:'IBM Plex Mono',monospace; color:#3A3D44;">REST</span>
+          </div>
+        </div>
+        <div style="display:flex; flex-direction:column; gap:14px;">
+          <p data-i18n="expIntro" style="margin:0; font-size:16px; line-height:1.65; color:#3A3D44;"></p>
+          <ul id="expBullets" style="margin:0; padding:0; list-style:none; display:flex; flex-direction:column; gap:11px;"></ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CAREER DIRECTION -->
+  <section id="career" style="padding:90px 28px; background:#14161A; color:#fff;">
+    <div style="max-width:1080px; margin:0 auto;">
+      <div data-reveal class="grid-career" style="display:grid; grid-template-columns:1fr 1fr; gap:48px; align-items:center;">
+        <div>
+          <div data-i18n="careerLabel" style="font-family:'IBM Plex Mono',monospace; font-size:13px; letter-spacing:0.12em; color:oklch(0.74 0.13 256); text-transform:uppercase;"></div>
+          <h2 data-i18n="careerHeading" style="font-family:'Space Grotesk',sans-serif; font-weight:600; font-size:clamp(28px,3.4vw,40px); line-height:1.12; letter-spacing:-0.01em; margin:18px 0 18px;"></h2>
+          <p data-i18n="careerP1" style="font-size:17px; line-height:1.65; color:rgba(255,255,255,0.7); margin:0 0 14px;"></p>
+          <p data-i18n="careerP2" style="font-size:15px; line-height:1.6; color:rgba(255,255,255,0.55); margin:0;"></p>
+        </div>
+        <div style="display:flex; flex-direction:column; gap:10px;">
+          <div data-i18n="careerRolesLabel" style="font-family:'IBM Plex Mono',monospace; font-size:12px; color:rgba(255,255,255,0.4); margin-bottom:4px; letter-spacing:0.08em;"></div>
+          <div style="display:flex; align-items:center; gap:12px; padding:15px 18px; border-radius:11px; background:oklch(0.55 0.15 256 / 0.15); border:1px solid oklch(0.6 0.15 256 / 0.3);"><span style="font-family:'IBM Plex Mono',monospace; font-size:13px; color:oklch(0.78 0.13 256);">01</span><span style="font-size:15px;">Junior Backend Developer — TypeScript / Node.js</span></div>
+          <div style="display:flex; align-items:center; gap:12px; padding:15px 18px; border-radius:11px; background:rgba(255,255,255,0.05); border:1px solid rgba(255,255,255,0.09);"><span style="font-family:'IBM Plex Mono',monospace; font-size:13px; color:rgba(255,255,255,0.4);">02</span><span style="font-size:15px;">Backend Developer — Node.js / Express.js</span></div>
+          <div style="display:flex; align-items:center; gap:12px; padding:15px 18px; border-radius:11px; background:rgba(255,255,255,0.05); border:1px solid rgba(255,255,255,0.09);"><span style="font-family:'IBM Plex Mono',monospace; font-size:13px; color:rgba(255,255,255,0.4);">03</span><span style="font-size:15px;">Software Developer — TypeScript</span></div>
+          <div style="display:flex; align-items:center; gap:12px; padding:15px 18px; border-radius:11px; background:rgba(255,255,255,0.05); border:1px solid rgba(255,255,255,0.09);"><span style="font-family:'IBM Plex Mono',monospace; font-size:13px; color:rgba(255,255,255,0.4);">04</span><span style="font-size:15px;">Junior Full-stack — backend-heavy</span></div>
+          <div style="display:flex; align-items:center; gap:12px; padding:15px 18px; border-radius:11px; background:rgba(255,255,255,0.05); border:1px solid rgba(255,255,255,0.09);"><span style="font-family:'IBM Plex Mono',monospace; font-size:13px; color:rgba(255,255,255,0.4);">05</span><span style="font-size:15px; color:rgba(255,255,255,0.75);">Android / Kotlin Developer <span style="color:rgba(255,255,255,0.4);">— <span data-i18n="careerSecondary"></span></span></span></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PROJECTS -->
+  <section id="projects" style="padding:104px 28px;">
+    <div style="max-width:1080px; margin:0 auto;">
+      <div data-reveal style="max-width:680px;">
+        <div data-i18n="projLabel" style="font-family:'IBM Plex Mono',monospace; font-size:13px; letter-spacing:0.12em; color:oklch(0.55 0.15 256); text-transform:uppercase;"></div>
+        <h2 data-i18n="projHeading" style="font-family:'Space Grotesk',sans-serif; font-weight:600; font-size:clamp(28px,3.4vw,40px); line-height:1.1; letter-spacing:-0.01em; margin:18px 0 12px;"></h2>
+        <p data-i18n="projIntro" style="font-size:16px; line-height:1.6; color:#6B6F77; margin:0;"></p>
+      </div>
+
+      <!-- Featured -->
+      <div data-reveal class="grid-featured" style="margin-top:44px; background:#fff; border:1px solid #E4E2DC; border-radius:18px; overflow:hidden; display:grid; grid-template-columns:1.1fr 0.9fr;">
+        <div style="padding:38px;">
+          <div style="display:flex; align-items:center; gap:10px;">
+            <span data-i18n="projFeaturedBadge" style="font-size:11px; font-family:'IBM Plex Mono',monospace; color:#fff; background:oklch(0.55 0.15 256); padding:5px 11px; border-radius:999px; letter-spacing:0.04em;"></span>
+            <span data-i18n="projInternship" style="font-size:11px; font-family:'IBM Plex Mono',monospace; color:#6B6F77;"></span>
+          </div>
+          <h3 style="font-family:'Space Grotesk',sans-serif; font-size:27px; font-weight:600; margin:18px 0 0; letter-spacing:-0.01em;">Cinema Microservices System</h3>
+          <div style="font-size:14px; color:#6B6F77; font-family:'IBM Plex Mono',monospace; margin-top:4px;">Go · Microservices · Docker · REST</div>
+          <p data-i18n="featDesc" style="font-size:15px; line-height:1.65; color:#3A3D44; margin:18px 0 0;"></p>
+          <div style="display:flex; flex-wrap:wrap; gap:8px; margin-top:20px;">
+            <span style="padding:6px 11px; border-radius:7px; background:#F0EFEA; font-size:12px; font-family:'IBM Plex Mono',monospace; color:#3A3D44;">Go</span>
+            <span style="padding:6px 11px; border-radius:7px; background:#F0EFEA; font-size:12px; font-family:'IBM Plex Mono',monospace; color:#3A3D44;">Microservices</span>
+            <span style="padding:6px 11px; border-radius:7px; background:#F0EFEA; font-size:12px; font-family:'IBM Plex Mono',monospace; color:#3A3D44;">Docker</span>
+            <span style="padding:6px 11px; border-radius:7px; background:#F0EFEA; font-size:12px; font-family:'IBM Plex Mono',monospace; color:#3A3D44;">REST</span>
+          </div>
+          <div style="display:flex; gap:12px; margin-top:26px;">
+            <a href="https://github.com/DusanStoiljkovic/cinema-microservices-system" target="_blank" rel="noopener" class="btn-dark" data-i18n="projViewSource" style="display:inline-flex; align-items:center; gap:8px; padding:11px 20px; border-radius:999px; background:#14161A; color:#fff; font-size:14px; font-weight:500; text-decoration:none;"></a>
+          </div>
+        </div>
+        <div style="background:repeating-linear-gradient(135deg,#EEECE7,#EEECE7 11px,#E6E4DE 11px,#E6E4DE 22px); display:flex; align-items:center; justify-content:center; min-height:340px;">
+          <span style="font-family:'IBM Plex Mono',monospace; font-size:12px; color:#9A958B; background:#F6F5F2; padding:7px 13px; border-radius:6px; border:1px solid #E4E2DC;">[ architecture diagram ]</span>
+        </div>
+      </div>
+
+      <!-- Grid -->
+      <div class="grid-projects-3" style="display:grid; grid-template-columns:repeat(3,1fr); gap:18px; margin-top:18px;">
+        <div data-reveal style="background:#fff; border:1px solid #E4E2DC; border-radius:16px; overflow:hidden; display:flex; flex-direction:column;">
+          <div style="background:repeating-linear-gradient(135deg,#EEECE7,#EEECE7 10px,#E6E4DE 10px,#E6E4DE 20px); height:140px; display:flex; align-items:center; justify-content:center;"><span style="font-family:'IBM Plex Mono',monospace; font-size:11px; color:#9A958B; background:#F6F5F2; padding:6px 11px; border-radius:6px; border:1px solid #E4E2DC;">[ store UI ]</span></div>
+          <div style="padding:22px; display:flex; flex-direction:column; flex:1;">
+            <span style="font-family:'IBM Plex Mono',monospace; font-size:11px; color:#9A958B;">FULL-STACK</span>
+            <h3 style="font-family:'Space Grotesk',sans-serif; font-size:18px; font-weight:600; margin:10px 0 6px;">MERN Toy Store</h3>
+            <div style="font-family:'IBM Plex Mono',monospace; font-size:11px; color:#9A958B; margin-bottom:8px;">Mongo · Express · React · Node</div>
+            <p data-i18n="proj1Desc" style="font-size:14px; line-height:1.55; color:#6B6F77; margin:0 0 16px;"></p>
+            <a href="https://github.com/DusanStoiljkovic/MERN-Toy-Store" target="_blank" rel="noopener" class="repo-link" style="margin-top:auto; font-size:13px; font-weight:500; color:oklch(0.5 0.15 256); text-decoration:none;">GitHub ↗</a>
+          </div>
+        </div>
+        <div data-reveal data-reveal-delay="80" style="background:#fff; border:1px solid #E4E2DC; border-radius:16px; overflow:hidden; display:flex; flex-direction:column;">
+          <div style="background:repeating-linear-gradient(135deg,#EEECE7,#EEECE7 10px,#E6E4DE 10px,#E6E4DE 20px); height:140px; display:flex; align-items:center; justify-content:center;"><span style="font-family:'IBM Plex Mono',monospace; font-size:11px; color:#9A958B; background:#F6F5F2; padding:6px 11px; border-radius:6px; border:1px solid #E4E2DC;">[ website ]</span></div>
+          <div style="padding:22px; display:flex; flex-direction:column; flex:1;">
+            <span style="font-family:'IBM Plex Mono',monospace; font-size:11px; color:#9A958B;">TYPESCRIPT</span>
+            <h3 style="font-family:'Space Grotesk',sans-serif; font-size:18px; font-weight:600; margin:10px 0 6px;">iTravel Website</h3>
+            <div style="font-family:'IBM Plex Mono',monospace; font-size:11px; color:#9A958B; margin-bottom:8px;">TypeScript</div>
+            <p data-i18n="proj2Desc" style="font-size:14px; line-height:1.55; color:#6B6F77; margin:0 0 16px;"></p>
+            <a href="https://github.com/DusanStoiljkovic/iTravel---Website" target="_blank" rel="noopener" class="repo-link" style="margin-top:auto; font-size:13px; font-weight:500; color:oklch(0.5 0.15 256); text-decoration:none;">GitHub ↗</a>
+          </div>
+        </div>
+        <div data-reveal data-reveal-delay="160" style="background:#fff; border:1px solid #E4E2DC; border-radius:16px; overflow:hidden; display:flex; flex-direction:column;">
+          <div style="background:repeating-linear-gradient(135deg,#EEECE7,#EEECE7 10px,#E6E4DE 10px,#E6E4DE 20px); height:140px; display:flex; align-items:center; justify-content:center;"><span style="font-family:'IBM Plex Mono',monospace; font-size:11px; color:#9A958B; background:#F6F5F2; padding:6px 11px; border-radius:6px; border:1px solid #E4E2DC;">[ terminal / API ]</span></div>
+          <div style="padding:22px; display:flex; flex-direction:column; flex:1;">
+            <span style="font-family:'IBM Plex Mono',monospace; font-size:11px; color:#9A958B;">BACKEND API</span>
+            <h3 style="font-family:'Space Grotesk',sans-serif; font-size:18px; font-weight:600; margin:10px 0 6px;">API ToyBeam</h3>
+            <div style="font-family:'IBM Plex Mono',monospace; font-size:11px; color:#9A958B; margin-bottom:8px;">JavaScript · REST</div>
+            <p data-i18n="proj3Desc" style="font-size:14px; line-height:1.55; color:#6B6F77; margin:0 0 16px;"></p>
+            <a href="https://github.com/DusanStoiljkovic/API-ToyBeam" target="_blank" rel="noopener" class="repo-link" style="margin-top:auto; font-size:13px; font-weight:500; color:oklch(0.5 0.15 256); text-decoration:none;">GitHub ↗</a>
+          </div>
+        </div>
+      </div>
+      <div data-reveal style="margin-top:24px;">
+        <a href="https://github.com/DusanStoiljkovic" target="_blank" rel="noopener" class="all-repos" style="display:inline-flex; align-items:center; gap:8px; font-size:14px; font-weight:500; color:#1A1C20; text-decoration:none; border-bottom:1px solid #C9C6BF; padding-bottom:2px;"><span data-i18n="projAllRepos"></span> →</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- CV -->
+  <section id="cv" style="padding:80px 28px;">
+    <div style="max-width:1080px; margin:0 auto;">
+      <div data-reveal class="grid-contact" style="background:#FBFAF7; border:1px solid #E4E2DC; border-radius:18px; padding:42px; display:flex; align-items:center; justify-content:space-between; gap:32px; flex-wrap:wrap;">
+        <div>
+          <div data-i18n="cvLabel" style="font-family:'IBM Plex Mono',monospace; font-size:13px; letter-spacing:0.12em; color:oklch(0.55 0.15 256); text-transform:uppercase;"></div>
+          <h2 data-i18n="cvHeading" style="font-family:'Space Grotesk',sans-serif; font-weight:600; font-size:clamp(24px,3vw,34px); margin:14px 0 6px;"></h2>
+          <p data-i18n="cvDesc" style="font-size:16px; color:#6B6F77; margin:0;"></p>
+        </div>
+        <div style="display:flex; gap:12px; flex-wrap:wrap;">
+          <a href="#" download class="cv-primary" style="display:inline-flex; align-items:center; gap:9px; padding:15px 26px; border-radius:999px; background:oklch(0.55 0.15 256); color:#fff; font-weight:500; font-size:15px; text-decoration:none;">↓ CV (EN)</a>
+          <a href="#" download class="cv-secondary" style="display:inline-flex; align-items:center; gap:9px; padding:15px 26px; border-radius:999px; border:1px solid #D9D6CF; color:#1A1C20; font-weight:500; font-size:15px; text-decoration:none;">↓ CV (DE)</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section id="contact" style="padding:96px 28px; background:#14161A; color:#fff;">
+    <div style="max-width:1080px; margin:0 auto;">
+      <div data-reveal class="grid-contact" style="display:grid; grid-template-columns:1fr 1fr; gap:48px;">
+        <div>
+          <div data-i18n="contactLabel" style="font-family:'IBM Plex Mono',monospace; font-size:13px; letter-spacing:0.12em; color:oklch(0.74 0.13 256); text-transform:uppercase;"></div>
+          <h2 data-i18n="contactHeading" style="font-family:'Space Grotesk',sans-serif; font-weight:600; font-size:clamp(30px,4vw,52px); line-height:1.05; letter-spacing:-0.02em; margin:18px 0 16px;"></h2>
+          <p data-i18n="contactDesc" style="font-size:17px; line-height:1.6; color:rgba(255,255,255,0.65); margin:0; max-width:44ch;"></p>
+        </div>
+        <div style="display:flex; flex-direction:column; gap:12px; align-self:center;">
+          <a href="mailto:dusan.stoiljkovic@email.com" class="contact-card" style="display:flex; align-items:center; justify-content:space-between; padding:18px 22px; border-radius:12px; background:rgba(255,255,255,0.05); border:1px solid rgba(255,255,255,0.1); text-decoration:none; color:#fff;"><span style="display:flex; flex-direction:column;"><span data-i18n="cEmail" style="font-size:12px; font-family:'IBM Plex Mono',monospace; color:rgba(255,255,255,0.45);"></span><span style="font-size:16px; margin-top:3px;">dusan.stoiljkovic@email.com</span></span><span style="color:oklch(0.74 0.13 256);">→</span></a>
+          <a href="https://github.com/DusanStoiljkovic" target="_blank" rel="noopener" class="contact-card" style="display:flex; align-items:center; justify-content:space-between; padding:18px 22px; border-radius:12px; background:rgba(255,255,255,0.05); border:1px solid rgba(255,255,255,0.1); text-decoration:none; color:#fff;"><span style="display:flex; flex-direction:column;"><span data-i18n="cGithub" style="font-size:12px; font-family:'IBM Plex Mono',monospace; color:rgba(255,255,255,0.45);"></span><span style="font-size:16px; margin-top:3px;">github.com/DusanStoiljkovic</span></span><span style="color:oklch(0.74 0.13 256);">→</span></a>
+          <a href="https://www.linkedin.com/in/dusan-stoiljkovic-508a51235/" target="_blank" rel="noopener" class="contact-card" style="display:flex; align-items:center; justify-content:space-between; padding:18px 22px; border-radius:12px; background:rgba(255,255,255,0.05); border:1px solid rgba(255,255,255,0.1); text-decoration:none; color:#fff;"><span style="display:flex; flex-direction:column;"><span data-i18n="cLinkedin" style="font-size:12px; font-family:'IBM Plex Mono',monospace; color:rgba(255,255,255,0.45);"></span><span style="font-size:16px; margin-top:3px;">linkedin.com/in/dusan-stoiljkovic</span></span><span style="color:oklch(0.74 0.13 256);">→</span></a>
+          <div style="display:flex; align-items:center; justify-content:space-between; padding:18px 22px; border-radius:12px; background:rgba(255,255,255,0.03); border:1px solid rgba(255,255,255,0.07);"><span style="display:flex; flex-direction:column;"><span data-i18n="cLocation" style="font-size:12px; font-family:'IBM Plex Mono',monospace; color:rgba(255,255,255,0.45);"></span><span data-i18n="cLocationValue" style="font-size:16px; margin-top:3px; color:rgba(255,255,255,0.8);"></span></span></div>
+        </div>
+      </div>
+      <div style="margin-top:64px; padding-top:24px; border-top:1px solid rgba(255,255,255,0.1); display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:12px;">
+        <span style="font-family:'IBM Plex Mono',monospace; font-size:13px; color:rgba(255,255,255,0.4);">© 2026 Dušan Stoiljković</span>
+        <span data-i18n="footerTag" style="font-family:'IBM Plex Mono',monospace; font-size:13px; color:rgba(255,255,255,0.4);"></span>
+      </div>
+    </div>
+  </section>
+
+<script>
+(function () {
+  var DICT = {
+    en: {
+      navAbout: "About", navSkills: "Skills", navExperience: "Experience", navProjects: "Projects", navContact: "Contact",
+      heroEyebrow: "Junior Software Developer · Niš, Serbia",
+      heroTitle: "I build practical software with clean code, APIs, and user-focused interfaces.",
+      heroSubtitle: "I'm Dušan Stoiljković — a junior developer with professional Android / Kotlin experience and a strong focus on backend development in TypeScript & Node.js.",
+      heroAvailableText: "Open to relocation to Austria · Remote / On-site",
+      heroCtaProjects: "View projects →", heroCtaCv: "Download CV",
+      aboutLabel: "01 — About", aboutHeading: "A junior developer with real, shipped experience.",
+      aboutP1: "I studied Software Development at Singidunum University and now work professionally as an Android Developer. My day-to-day is real product work: building UI, managing screen states, modelling data, and wiring up REST API requests on a production mobile application.",
+      aboutP2: "I joined an established engineering team mid-project, which taught me how to read an existing architecture, follow team conventions, and contribute to a codebase I didn't start from scratch — a skill I value as much as writing new code.",
+      aboutP3: "My long-term focus is backend development: TypeScript, Node.js, Express.js, clean architecture, testing, Docker, and data-driven systems. I'm building toward that direction deliberately, and I'm aiming to grow my career in Austria.",
+      aboutStat1T: "Android Dev", aboutStat1S: "Current professional role",
+      aboutStat2T: "Backend", aboutStat2S: "TypeScript / Node.js focus",
+      aboutStat3T: "Austria 🇦🇹", aboutStat3S: "Relocation goal",
+      skillsLabel: "02 — Skills", skillsHeading: "Organised by where I am — and where I'm heading.",
+      skProfKicker: "PROFESSIONAL", skProfDesc: "My current paid stack — used daily in production.",
+      skFocusBadge: "FOCUS", skFocusKicker: "BUILDING TOWARD", skFocusDesc: "The direction I'm actively investing in.",
+      skSupKicker: "SUPPORTING", skSupTitle: "Web & tooling", skSupDesc: "Familiar with, used in earlier projects.",
+      skillsNote: "// Honest labelling — professional vs. actively-learning is kept clear on purpose.",
+      expLabel: "03 — Experience", expHeading: "Where I work today.", expPeriod: "2026 — Present",
+      expIntro: "I work on the Android side of a Kotlin Multiplatform / Compose health-monitoring application, contributing within an established team architecture.",
+      expBullets: [
+        "Build health screens and detail views in Jetpack Compose, including UI states (loading, empty, error, success).",
+        "Implement data models and mappers between API responses and UI-facing models.",
+        "Integrate REST API requests and handle the resulting screen logic and state.",
+        "Work within existing conventions, Git workflow, and a shared multiplatform codebase."
+      ],
+      careerLabel: "04 — Career direction", careerHeading: "Heading toward backend, in Austria.",
+      careerP1: "I'm honest about being early in my career. I have professional Android experience to build on, and I'm deliberately growing my backend skills to move toward the roles I want most.",
+      careerP2: "Open to relocation. Comfortable working in English; learning German.",
+      careerRolesLabel: "TARGET ROLES", careerSecondary: "secondary",
+      projLabel: "05 — Projects", projHeading: "Selected work from my GitHub.",
+      projIntro: "Real repositories — backend, full-stack, and distributed systems. Pulled from github.com/DusanStoiljkovic.",
+      projFeaturedBadge: "FEATURED", projInternship: "Internship project", projViewSource: "Source →", projAllRepos: "See all repositories on GitHub",
+      featDesc: "A distributed cinema system built as microservices in Go — independent services communicating over REST, containerised with Docker. Developed during a development internship.",
+      proj1Desc: "A full-stack MERN web store — REST API backend with Express and MongoDB, plus a React frontend for browsing and ordering.",
+      proj2Desc: "A TypeScript travel website built as university coursework, focused on typed, structured frontend code.",
+      proj3Desc: "A JavaScript REST API project handling resource endpoints and data — a focused backend service.",
+      cvLabel: "06 — CV", cvHeading: "Download my CV", cvDesc: "One-page PDF — English, recruiter-ready. German version available on request.",
+      contactLabel: "07 — Contact", contactHeading: "Let's talk about your backend roles.",
+      contactDesc: "Open to junior backend and software developer positions in Austria. I usually reply within a day.",
+      cEmail: "EMAIL", cGithub: "GITHUB", cLinkedin: "LINKEDIN", cLocation: "LOCATION", cLocationValue: "Niš, Serbia · open to Austria",
+      footerTag: "Built with care · Niš → Wien"
+    },
+    sr: {
+      navAbout: "O meni", navSkills: "Veštine", navExperience: "Iskustvo", navProjects: "Projekti", navContact: "Kontakt",
+      heroEyebrow: "Junior Software Developer · Niš, Srbija",
+      heroTitle: "Pravim praktičan softver sa čistim kodom, API-jima i interfejsima usmerenim na korisnika.",
+      heroSubtitle: "Ja sam Dušan Stoiljković — junior developer sa profesionalnim Android / Kotlin iskustvom i jakim fokusom na backend razvoj u TypeScript-u i Node.js-u.",
+      heroAvailableText: "Spreman za preseljenje u Austriju · Remote / Rad iz kancelarije",
+      heroCtaProjects: "Pogledaj projekte →", heroCtaCv: "Preuzmi CV",
+      aboutLabel: "01 — O meni", aboutHeading: "Junior developer sa stvarnim, isporučenim iskustvom.",
+      aboutP1: "Studirao sam Softversko inženjerstvo na Univerzitetu Singidunum, a sada profesionalno radim kao Android Developer. Moj svakodnevni posao je rad na realnom proizvodu: izrada UI-ja, upravljanje stanjima ekrana, modelovanje podataka i integracija REST API zahteva u produkcionoj mobilnoj aplikaciji.",
+      aboutP2: "Pridružio sam se uigranom inženjerskom timu usred projekta, što me je naučilo kako da razumem postojeću arhitekturu, pratim konvencije tima i doprinosim kodu koji nisam započeo od nule — veština koju cenim koliko i pisanje novog koda.",
+      aboutP3: "Moj dugoročni fokus je backend razvoj: TypeScript, Node.js, Express.js, čista arhitektura, testiranje, Docker i sistemi vođeni podacima. Svesno gradim u tom pravcu i želim da razvijam karijeru u Austriji.",
+      aboutStat1T: "Android Dev", aboutStat1S: "Trenutna profesionalna uloga",
+      aboutStat2T: "Backend", aboutStat2S: "Fokus na TypeScript / Node.js",
+      aboutStat3T: "Austrija 🇦🇹", aboutStat3S: "Cilj preseljenja",
+      skillsLabel: "02 — Veštine", skillsHeading: "Organizovano po tome gde sam — i kuda idem.",
+      skProfKicker: "PROFESIONALNO", skProfDesc: "Moj trenutni plaćeni stack — koristim ga svakodnevno u produkciji.",
+      skFocusBadge: "FOKUS", skFocusKicker: "GRADIM KA", skFocusDesc: "Pravac u koji aktivno ulažem.",
+      skSupKicker: "PODRŠKA", skSupTitle: "Web i alati", skSupDesc: "Poznato mi je, korišćeno u ranijim projektima.",
+      skillsNote: "// Iskreno označavanje — profesionalno naspram onoga što aktivno učim, namerno je jasno razdvojeno.",
+      expLabel: "03 — Iskustvo", expHeading: "Gde radim danas.", expPeriod: "2026 — danas",
+      expIntro: "Radim na Android strani aplikacije za praćenje zdravlja, rađene u Kotlin Multiplatform / Compose, doprinoseći unutar uspostavljene timske arhitekture.",
+      expBullets: [
+        "Izrada zdravstvenih ekrana i detaljnih prikaza u Jetpack Compose-u, uključujući UI stanja (učitavanje, prazno, greška, uspeh).",
+        "Implementacija modela podataka i mapera između API odgovora i modela za prikaz.",
+        "Integracija REST API zahteva i upravljanje logikom i stanjem ekrana.",
+        "Rad u okviru postojećih konvencija, Git toka rada i deljenog multiplatform koda."
+      ],
+      careerLabel: "04 — Pravac karijere", careerHeading: "Ka backend-u, u Austriji.",
+      careerP1: "Iskren sam u vezi s tim da sam na početku karijere. Imam profesionalno Android iskustvo na koje se oslanjam i svesno razvijam backend veštine kako bih došao do uloga koje najviše želim.",
+      careerP2: "Spreman za preseljenje. Tečno radim na engleskom; učim nemački.",
+      careerRolesLabel: "CILJANE ULOGE", careerSecondary: "sekundarno",
+      projLabel: "05 — Projekti", projHeading: "Izabrani radovi sa mog GitHub-a.",
+      projIntro: "Stvarni repozitorijumi — backend, full-stack i distribuirani sistemi. Sa github.com/DusanStoiljkovic.",
+      projFeaturedBadge: "IZDVOJENO", projInternship: "Projekat sa prakse", projViewSource: "Izvorni kod →", projAllRepos: "Pogledaj sve repozitorijume na GitHub-u",
+      featDesc: "Distribuirani bioskopski sistem napravljen kao mikroservisi u Go-u — nezavisni servisi koji komuniciraju preko REST-a, kontejnerizovani Docker-om. Razvijeno tokom prakse.",
+      proj1Desc: "Full-stack MERN web prodavnica — REST API backend sa Express-om i MongoDB-om, uz React frontend za pregled i poručivanje.",
+      proj2Desc: "Sajt o putovanjima u TypeScript-u, rađen kao deo fakultetskih vežbi, sa fokusom na tipiziran i strukturiran frontend kod.",
+      proj3Desc: "JavaScript REST API projekat koji obrađuje endpointe i podatke — fokusiran backend servis.",
+      cvLabel: "06 — CV", cvHeading: "Preuzmi moj CV", cvDesc: "Jednostrani PDF — engleski, spreman za poslodavce. Nemačka verzija dostupna na zahtev.",
+      contactLabel: "07 — Kontakt", contactHeading: "Hajde da popričamo o vašim backend ulogama.",
+      contactDesc: "Otvoren za junior backend i software developer pozicije u Austriji. Obično odgovaram u roku od jednog dana.",
+      cEmail: "EMAIL", cGithub: "GITHUB", cLinkedin: "LINKEDIN", cLocation: "LOKACIJA", cLocationValue: "Niš, Srbija · otvoren za Austriju",
+      footerTag: "Rađeno s pažnjom · Niš → Beč"
+    },
+    de: {
+      navAbout: "Über mich", navSkills: "Skills", navExperience: "Erfahrung", navProjects: "Projekte", navContact: "Kontakt",
+      heroEyebrow: "Junior Software Developer · Niš, Serbien",
+      heroTitle: "Ich entwickle praktische Software mit sauberem Code, APIs und nutzerorientierten Interfaces.",
+      heroSubtitle: "Ich bin Dušan Stoiljković — Junior-Entwickler mit professioneller Android- / Kotlin-Erfahrung und einem starken Fokus auf Backend-Entwicklung mit TypeScript & Node.js.",
+      heroAvailableText: "Umzugsbereit nach Österreich · Remote / Vor Ort",
+      heroCtaProjects: "Projekte ansehen →", heroCtaCv: "CV herunterladen",
+      aboutLabel: "01 — Über mich", aboutHeading: "Ein Junior-Entwickler mit echter, ausgelieferter Erfahrung.",
+      aboutP1: "Ich habe Softwareentwicklung an der Singidunum-Universität studiert und arbeite jetzt beruflich als Android-Entwickler. Mein Alltag ist echte Produktarbeit: UI bauen, Screen-States verwalten, Daten modellieren und REST-API-Anfragen in einer produktiven mobilen Anwendung anbinden.",
+      aboutP2: "Ich bin mitten im Projekt zu einem eingespielten Entwicklerteam gestoßen. Das hat mir beigebracht, eine bestehende Architektur zu lesen, Team-Konventionen zu folgen und zu einer Codebasis beizutragen, die ich nicht selbst begonnen habe — eine Fähigkeit, die ich genauso schätze wie das Schreiben von neuem Code.",
+      aboutP3: "Mein langfristiger Fokus liegt auf der Backend-Entwicklung: TypeScript, Node.js, Express.js, Clean Architecture, Testing, Docker und datengetriebene Systeme. Ich arbeite bewusst in diese Richtung und möchte meine Karriere in Österreich aufbauen.",
+      aboutStat1T: "Android Dev", aboutStat1S: "Aktuelle berufliche Rolle",
+      aboutStat2T: "Backend", aboutStat2S: "Fokus TypeScript / Node.js",
+      aboutStat3T: "Österreich 🇦🇹", aboutStat3S: "Umzugsziel",
+      skillsLabel: "02 — Skills", skillsHeading: "Geordnet nach: wo ich stehe — und wohin ich will.",
+      skProfKicker: "PROFESSIONELL", skProfDesc: "Mein aktueller bezahlter Stack — täglich in Produktion im Einsatz.",
+      skFocusBadge: "FOKUS", skFocusKicker: "IM AUFBAU", skFocusDesc: "Die Richtung, in die ich aktiv investiere.",
+      skSupKicker: "UNTERSTÜTZEND", skSupTitle: "Web & Tools", skSupDesc: "Vertraut, in früheren Projekten genutzt.",
+      skillsNote: "// Ehrliche Einordnung — professionell vs. aktiv im Lernen wird bewusst klar getrennt.",
+      expLabel: "03 — Erfahrung", expHeading: "Wo ich heute arbeite.", expPeriod: "2026 — heute",
+      expIntro: "Ich arbeite an der Android-Seite einer Health-Monitoring-Anwendung auf Basis von Kotlin Multiplatform / Compose und trage innerhalb einer bestehenden Team-Architektur bei.",
+      expBullets: [
+        "Entwicklung von Health-Screens und Detailansichten in Jetpack Compose, inklusive UI-States (Laden, Leer, Fehler, Erfolg).",
+        "Implementierung von Datenmodellen und Mappern zwischen API-Antworten und UI-Modellen.",
+        "Integration von REST-API-Anfragen sowie Handhabung der zugehörigen Screen-Logik und States.",
+        "Arbeit innerhalb bestehender Konventionen, Git-Workflow und einer gemeinsamen Multiplatform-Codebasis."
+      ],
+      careerLabel: "04 — Karriererichtung", careerHeading: "Richtung Backend, in Österreich.",
+      careerP1: "Ich bin ehrlich: Ich stehe am Anfang meiner Karriere. Ich habe professionelle Android-Erfahrung als Basis und baue gezielt meine Backend-Fähigkeiten aus, um zu den Rollen zu gelangen, die ich am meisten anstrebe.",
+      careerP2: "Umzugsbereit. Sicher auf Englisch; ich lerne Deutsch.",
+      careerRolesLabel: "ZIELROLLEN", careerSecondary: "sekundär",
+      projLabel: "05 — Projekte", projHeading: "Ausgewählte Arbeiten von meinem GitHub.",
+      projIntro: "Echte Repositories — Backend, Full-Stack und verteilte Systeme. Von github.com/DusanStoiljkovic.",
+      projFeaturedBadge: "HIGHLIGHT", projInternship: "Praktikumsprojekt", projViewSource: "Quellcode →", projAllRepos: "Alle Repositories auf GitHub ansehen",
+      featDesc: "Ein verteiltes Kino-System, gebaut als Microservices in Go — unabhängige Services, die über REST kommunizieren, containerisiert mit Docker. Entwickelt während eines Entwicklungs-Praktikums.",
+      proj1Desc: "Ein Full-Stack-MERN-Webshop — REST-API-Backend mit Express und MongoDB sowie ein React-Frontend zum Stöbern und Bestellen.",
+      proj2Desc: "Eine Reise-Website in TypeScript, entstanden im Rahmen einer Universitätsübung, mit Fokus auf typisierten, strukturierten Frontend-Code.",
+      proj3Desc: "Ein JavaScript-REST-API-Projekt, das Endpoints und Daten verarbeitet — ein fokussierter Backend-Service.",
+      cvLabel: "06 — CV", cvHeading: "Meinen CV herunterladen", cvDesc: "Einseitiges PDF — Englisch, bewerbungsfertig. Deutsche Version auf Anfrage.",
+      contactLabel: "07 — Kontakt", contactHeading: "Sprechen wir über Ihre Backend-Stellen.",
+      contactDesc: "Offen für Junior-Backend- und Software-Developer-Positionen in Österreich. Ich antworte meist innerhalb eines Tages.",
+      cEmail: "E-MAIL", cGithub: "GITHUB", cLinkedin: "LINKEDIN", cLocation: "STANDORT", cLocationValue: "Niš, Serbien · offen für Österreich",
+      footerTag: "Mit Sorgfalt gebaut · Niš → Wien"
+    }
+  };
+
+  var docEl = document.documentElement;
+  var bulletList = document.getElementById('expBullets');
+
+  function applyLang(lang) {
+    var t = DICT[lang] || DICT.en;
+    document.querySelectorAll('[data-i18n]').forEach(function (el) {
+      var key = el.getAttribute('data-i18n');
+      if (t[key] != null) el.textContent = t[key];
+    });
+    // experience bullets (list)
+    bulletList.innerHTML = '';
+    (t.expBullets || []).forEach(function (text) {
+      var li = document.createElement('li');
+      li.style.cssText = 'display:flex; gap:11px; font-size:15px; line-height:1.55; color:#3A3D44;';
+      var mark = document.createElement('span');
+      mark.style.cssText = 'color:oklch(0.55 0.15 256); margin-top:1px;';
+      mark.textContent = '▹';
+      var span = document.createElement('span');
+      span.textContent = text;
+      li.appendChild(mark); li.appendChild(span);
+      bulletList.appendChild(li);
+    });
+    docEl.setAttribute('lang', lang);
+    document.querySelectorAll('.lang-btn').forEach(function (b) {
+      b.classList.toggle('active', b.getAttribute('data-lang') === lang);
+    });
+    try { localStorage.setItem('ds_lang', lang); } catch (e) {}
+  }
+
+  document.querySelectorAll('.lang-btn').forEach(function (b) {
+    b.addEventListener('click', function () { applyLang(b.getAttribute('data-lang')); });
+  });
+
+  var saved = 'en';
+  try { saved = localStorage.getItem('ds_lang') || 'en'; } catch (e) {}
+  if (!DICT[saved]) saved = 'en';
+  applyLang(saved);
+
+  // scroll reveal
+  var els = Array.prototype.slice.call(document.querySelectorAll('[data-reveal]'));
+  els.forEach(function (el) {
+    el.style.opacity = '0';
+    el.style.transform = 'translateY(20px)';
+    el.style.transition = 'opacity .75s cubic-bezier(.22,1,.36,1), transform .75s cubic-bezier(.22,1,.36,1)';
+  });
+  if ('IntersectionObserver' in window) {
+    var io = new IntersectionObserver(function (entries) {
+      entries.forEach(function (e) {
+        if (e.isIntersecting) {
+          var el = e.target;
+          var d = parseInt(el.getAttribute('data-reveal-delay') || '0', 10);
+          setTimeout(function () { el.style.opacity = '1'; el.style.transform = 'none'; }, d);
+          io.unobserve(el);
+        }
+      });
+    }, { threshold: 0.1, rootMargin: '0px 0px -7% 0px' });
+    els.forEach(function (el) { io.observe(el); });
+  } else {
+    els.forEach(function (el) { el.style.opacity = '1'; el.style.transform = 'none'; });
+  }
+
+  // nav scroll background
+  var nav = document.querySelector('[data-nav]');
+  function onScroll() {
+    if (!nav) return;
+    if (window.scrollY > 40) {
+      nav.style.background = 'rgba(20,22,26,0.82)';
+      nav.style.backdropFilter = 'blur(12px)';
+      nav.style.webkitBackdropFilter = 'blur(12px)';
+      nav.style.borderBottomColor = 'rgba(255,255,255,0.08)';
+    } else {
+      nav.style.background = 'transparent';
+      nav.style.backdropFilter = 'none';
+      nav.style.webkitBackdropFilter = 'none';
+      nav.style.borderBottomColor = 'transparent';
+    }
+  }
+  onScroll();
+  window.addEventListener('scroll', onScroll, { passive: true });
+})();
+</script>
+</body>
+</html>
